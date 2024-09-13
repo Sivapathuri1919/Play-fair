@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: lightblue;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: absolute;
+    max-width: 1200px;
+    height: auto;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.myCtn {
+    position: relative;
+    background: #fff;
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
+}
+
+.myCtn header {
+    color: blueviolet;
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.myForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+label {
+    font-size: 22px;
+    font-weight: 600;
+    width: 100%;
+    max-width: 500px;
+    text-align: left;
+}
+
+.myInput {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 25px;
+    padding: 15px;
+    font-size: 20px;
+    border: 1px solid black;
+    box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+}
+
+textarea.myInput {
+    resize: vertical;
+    height: 150px;
+}
+
+.butt {
+    background: linear-gradient(45deg, #bb36fd, #9b00eB);
+    color: #fff;
+    width: 100%;
+    max-width: 500px;
+    border: none;
+    border-radius: 25px;
+    padding: 15px;
+    font-size: 20px;
+    box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+
+.butt:hover {
+    background: linear-gradient(45deg, #c85bff, #b726ff);
+}
+
+.result-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+    text-align: center;
+}

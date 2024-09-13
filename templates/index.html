@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playfair Cipher</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="myCtn">
+            <header>Playfair Cipher</header>
+            <form method="POST" class="myForm">
+                <label for="mode">Choose mode:</label>
+                <select name="mode" id="mode" class="myInput">
+                    <option value="encrypt" {% if mode == 'encrypt' %}selected{% endif %}>Encrypt</option>
+                    <option value="decrypt" {% if mode == 'decrypt' %}selected{% endif %}>Decrypt</option>
+                </select>
+
+                <label for="key">Enter key:</label>
+                <input type="text" name="key" id="key" class="myInput" required>
+
+                <label for="text">Enter text:</label>
+                <textarea name="text" id="text" class="myInput" required></textarea>
+
+                <button type="submit" class="butt">Submit</button>
+            </form>
+            <br><br>
+
+            {% if result %}
+            <h2>{{ mode.capitalize() }}ed text:</h2>
+            <p class="result-text">{{ result }}</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
